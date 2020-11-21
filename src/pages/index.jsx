@@ -3,6 +3,7 @@ import React, { useRef } from "react"
 import { scrollTo } from "../utils/scroll"
 
 import About from "../components/about"
+import Contact from "../components/contact"
 import Navbar from "../components/navbar"
 import Projects from "../components/projects"
 import TopSection from "../components/top-section"
@@ -10,6 +11,7 @@ import TopSection from "../components/top-section"
 const Home = () => {
   const aboutRef = useRef(null)
   const projectsRef = useRef(null)
+  const contactRef = useRef(null)
 
   return (
     <>
@@ -33,12 +35,21 @@ const Home = () => {
           >
             Projects
           </div>
-          <div className="cursor-pointer hover:border-solid border-transparent border-b-4 hover:border-black pb-1">
+          <div
+            className="cursor-pointer hover:border-solid border-transparent border-b-4 hover:border-black pb-1"
+            onClick={() =>
+              scrollTo(
+                contactRef.current.offsetParent.offsetTop +
+                  contactRef.current.offsetTop
+              )
+            }
+          >
             Contact
           </div>
         </Navbar>
         <About ref={aboutRef} />
         <Projects ref={projectsRef} />
+        <Contact ref={contactRef} />
       </div>
     </>
   )

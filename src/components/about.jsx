@@ -1,8 +1,11 @@
 import React, { forwardRef } from "react"
 
 const About = forwardRef(({}, ref) => (
-  <div className="bg-gray-200 py-44 px-20 text-center s" ref={ref}>
-    <p className="text-4xl">
+  <div className="bg-gray-200 py-44 px-20 text-center" ref={ref}>
+    <h1 className="inline-block text-6xl pb-4 border-b-8 border-black border-solid tracking-wider">
+      About
+    </h1>
+    <p className="text-4xl mt-14">
       I am currently working as a software engineer for BluJay Solutions, a
       leader in the logistics and transportation software and services industry.
     </p>
@@ -12,8 +15,8 @@ const About = forwardRef(({}, ref) => (
     </p>
     <p className="text-2xl mt-6">
       Previously I worked at Nexteer Automotive on embedded software for
-      electric power steering systems. I graduated with a degree in computer
-      engineering from Michigan State University.
+      electric power steering systems. Prior to that, I attended Michigan State
+      University and graduated with a bachelor's degree in computer engineering.
     </p>
   </div>
 ))
